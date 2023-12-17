@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PraktikumUTS2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.PraktikumUTS2" parent="Base.Theme.PraktikumUTS2" />
+    
+    <style name="Theme.App.SplashScreen" parent="Base.Theme.PraktikumUTS2">
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/daunncalorie</item>
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+    </style>
+
+    <style name="SplashScreenStyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/calorieapp2</item>
+    </style>
+</resources>

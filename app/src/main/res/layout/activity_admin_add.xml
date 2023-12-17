@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C2D3C4"
+    tools:context=".AdminAddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="50dp"
+        android:paddingHorizontal="30dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Menu"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/add_nama"
+        android:hint="nama menu"
+        android:paddingHorizontal="15dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_edit_text"/>
+
+    <EditText
+        android:id="@+id/add_kalori"
+        android:hint="info kalori"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/edit_edit_text"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/add_gambar"
+        android:src="@drawable/baseline_picture_in_picture_24"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="15dp"
+        android:backgroundTint="@color/whiteu"
+        android:background="@color/whiteu"
+        android:layout_height="100dp"/>
+    <TextView
+        android:id="@+id/add_tanggal_tambah"
+        android:clickable="false"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/edit_edit_text"
+        android:layout_height="wrap_content"/>
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_tanggal"
+     />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="apply"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/btn_applyWaktuMakan"
+        android:backgroundTint="@color/hijauPastel4"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/btn_save"
+        android:text="SAVE"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/whiteu"/>
+</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#C2D3C4"
+    android:paddingVertical="45dp"
+    android:paddingHorizontal="35dp"
+    tools:context=".SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearL"
+        android:gravity="top"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_edit_text"
+        android:hint="cari makanan"
+        android:id="@+id/text_search"
+        android:layout_weight="1"
+        />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_search_24"
+            android:backgroundTint="#EDEDED"
+            android:text="search"
+            android:id="@+id/button_search"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        tools:listitem="@layout/item_search"
+        app:layout_constraintTop_toBottomOf="@+id/linearL"
+        android:id="@+id/recyclerView1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/button_custom_makanan"
+        android:text="+ Custom Makanan"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "320345499659",
+    "project_id": "uasfirebase-a3ce6",
+    "storage_bucket": "uasfirebase-a3ce6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320345499659:android:f300abd044acdfd09d7f0e",
+        "android_client_info": {
+          "package_name": "com.example.praktikumuts2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz6lsoTd4QmzoCpw5AudM-VH-YxUQJuHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

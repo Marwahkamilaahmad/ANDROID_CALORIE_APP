@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hijau">#25CC6D</color>
+    <color name="whiteu">#F3F6F8</color>
+    <color name="hijauPastel">#E4E4D0</color>
+    <color name="hijauPastel2">#AEC3AE</color>
+    <color name="hijauPastel3">#C3EDC0</color>
+    <color name="hijauPastel4">#E4E4D0</color>
+    <color name="hijauPastel5">#85A389</color>
+    <color name="orangePastel6">#F1C27B</color>
+    <color name="orangePastel">#FFD89C</color>
+    <color name="orangePastel2">#FDFFAE</color>
+    <color name="orangePastel3">#EEE0C9</color>
+    <color name="red">#F44336</color>
+    <color name="abuFundamental">#EDEDED</color>
+    <color name="gray">#575656</color>
+</resources>
