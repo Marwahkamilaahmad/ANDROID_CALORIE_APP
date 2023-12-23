@@ -8,7 +8,11 @@
             android:id="@+id/riwayatFragment"
             android:name="com.example.praktikumuts2.RiwayatFragment"
             android:label="fragment_riwayat"
-            tools:layout="@layout/fragment_riwayat" />
+            tools:layout="@layout/fragment_riwayat" >
+                <action
+                    android:id="@+id/action_riwayatFragment_to_searchFragment2"
+                    app:destination="@id/searchFragment2" />
+        </fragment>
         <fragment
             android:id="@+id/berandaFragment"
             android:name="com.example.praktikumuts2.BerandaFragment"
@@ -19,4 +23,18 @@
             android:name="com.example.praktikumuts2.ProfileFragment"
             android:label="fragment_profile"
             tools:layout="@layout/fragment_profile" />
+        <fragment
+            android:id="@+id/searchFragment2"
+            android:name="com.example.praktikumuts2.SearchFragment"
+            android:label="fragment_search"
+            tools:layout="@layout/fragment_search" >
+                <action
+                    android:id="@+id/action_searchFragment2_to_addMenuFragment2"
+                    app:destination="@id/addMenuFragment2" />
+        </fragment>
+        <fragment
+            android:id="@+id/addMenuFragment2"
+            android:name="com.example.praktikumuts2.AddMenuFragment"
+            android:label="fragment_add_menu"
+            tools:layout="@layout/fragment_add_menu" />
 </navigation>

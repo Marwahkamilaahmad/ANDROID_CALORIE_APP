@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3D2D2"
+    android:background="#000000"
     tools:context=".AdminAddActivity">
 
     <LinearLayout
@@ -43,16 +43,7 @@
             android:paddingHorizontal="15dp"
             android:background="@drawable/edit_edit_text"
             android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/add_gambar"
-            android:hint="gambar"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:backgroundTint="@color/hijauPastel2"
-            android:paddingHorizontal="15dp"
-            android:background="@drawable/edit_edit_text"
-            android:layout_height="wrap_content"/>
-        <EditText
+        <TextView
             android:id="@+id/add_tanggal_tambah"
             android:clickable="false"
             android:layout_marginBottom="10dp"

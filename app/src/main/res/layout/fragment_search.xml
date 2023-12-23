@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E4E4E4"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#C2D3C4"
     android:paddingVertical="45dp"
     android:paddingHorizontal="35dp"
     tools:context=".SearchFragment">
@@ -19,26 +19,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_edit_text"
-        android:hint="cari makanan"
-        android:id="@+id/text_search"
-        android:layout_weight="1"
-        />
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:background="@drawable/container_search"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:drawablePadding="@dimen/drawable_left"
+            android:gravity="center_vertical"
+            android:hint="@string/edt_search"
+            android:inputType="text"
+            android:paddingLeft="@dimen/normalPadding"
+            android:paddingTop="@dimen/vertical_search"
+            android:paddingRight="@dimen/normalPadding"
+            android:paddingBottom="@dimen/vertical_search"
+            android:singleLine="true"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textColorHint="@color/color_hint"
+            android:textSize="14sp"
+            android:layout_weight="1"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_search_24"
             android:backgroundTint="#EDEDED"
-            android:text="search"
+            android:text=""
             android:id="@+id/button_search"
             android:textColor="@color/gray"
             android:textSize="16sp"
             android:layout_marginStart="10dp"
-            android:layout_weight="2"/>
+            android:layout_weight="4"/>
 
     </LinearLayout>
 

@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PraktikumUTS2"
         tools:targetApi="31">
+        <activity
+            android:name=".AddMenuActivity"
+            android:exported="false" />
         <activity
             android:name=".AdminAddActivity"
             android:exported="false" />

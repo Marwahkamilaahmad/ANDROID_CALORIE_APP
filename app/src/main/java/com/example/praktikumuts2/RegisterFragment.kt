@@ -49,9 +49,15 @@ class RegisterFragment : Fragment() {
                     textEmail.setError("email ini harus diisi!")
                 } else {
                     // Menggantikan fragment saat ini dengan LoginFragment
+
                     auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(requireActivity()){ task ->
                             if (task.isSuccessful){
+                                val prefManager = PrefManager.getInstance(requireContext())
+                                prefManager.saveEmail(email)
+                                prefManager.savePassword(password)
+                                prefManager.setLoggedIn(true)
+
                                 val user = auth.currentUser
                                 val userId = user?.uid
 

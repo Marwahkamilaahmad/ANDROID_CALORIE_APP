@@ -1,31 +1,31 @@
 package com.example.praktikumuts2
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.praktikumuts2.databinding.FragmentRiwayatBinding
+import com.example.praktikumuts2.databinding.FragmentSearchBinding
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RiwayatFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RiwayatFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var binding: FragmentRiwayatBinding
+    private lateinit var mNotesDao: NoteDao
+    private lateinit var executorService: ExecutorService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
+
+
         }
     }
 
@@ -33,27 +33,50 @@ class RiwayatFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_riwayat, container, false)
+        binding = FragmentRiwayatBinding.inflate(inflater, container, false)
+        executorService = Executors.newSingleThreadExecutor()
+        val dbNote = NoteRoomDatabase.getDatabase(requireContext())
+        mNotesDao = dbNote?.noteDao()!!
+        val view = binding.root
+
+        getAllNotes()
+
+        with(binding){
+
+        }
+        return view
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RiwayatFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RiwayatFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        with(binding){
+            buttonAdd.setOnClickListener{
+            findNavController().navigate(R.id.action_riwayatFragment_to_searchFragment2)
             }
+        }
+
+
     }
+
+    private fun getAllNotes() {
+        mNotesDao.allMenus.observe(requireActivity()) { menu ->
+            val noteAdapter = NoteAdapter(ArrayList<Note>()) {
+                    menu -> deleteMenu(menu)
+            }
+            binding.rvRiwayat.apply {
+                adapter = noteAdapter
+                layoutManager = LinearLayoutManager(requireContext())
+            }
+            noteAdapter.setData(menu)
+        }
+
+
+    }
+
+    private fun deleteMenu(menu: Note){
+        executorService.execute{ mNotesDao.delete(menu)}
+    }
+
+
 }

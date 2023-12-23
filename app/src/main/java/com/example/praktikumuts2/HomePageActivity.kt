@@ -9,10 +9,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.example.praktikumuts2.GetstartedActivity.Companion.EXTRA_BERAT_TARGET
 import com.example.praktikumuts2.GetstartedActivity.Companion.EXTRA_MAKSIMUMKAL
 import com.example.praktikumuts2.GetstartedActivity.Companion.EXTRA_TANGGAL_TARGET
-import com.example.praktikumuts2.InputdataActivity.Companion.EXTRA_JENIS_MAKAN
-import com.example.praktikumuts2.InputdataActivity.Companion.EXTRA_KALORIMAKAN
-import com.example.praktikumuts2.InputdataActivity.Companion.EXTRA_KALORIWORKOUT
-import com.example.praktikumuts2.InputdataActivity.Companion.EXTRA_LATESTUPDATE
 import com.example.praktikumuts2.databinding.ActivityHomePageBinding
 import com.example.praktikumuts2.databinding.ActivityInputdataBinding
 import java.text.SimpleDateFormat
@@ -71,10 +67,6 @@ class HomePageActivity : AppCompatActivity() {
                 result ->
             if(result.resultCode == Activity.RESULT_OK){
                 val data = result.data
-                jenisMakan = data?.getStringExtra(EXTRA_JENIS_MAKAN)
-                kaloriMakan = data?.getStringExtra(EXTRA_KALORIMAKAN)
-                kaloriDataWorkout = data?.getStringExtra(EXTRA_KALORIWORKOUT)
-                latestUpdate = data?.getStringExtra(EXTRA_LATESTUPDATE)
 
                 with(binding){
                     latestUpdateMakan.text = latestUpdate

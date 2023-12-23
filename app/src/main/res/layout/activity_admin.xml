@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="20dp"
+    android:background="#F6F3F3"
     android:paddingVertical="30dp"
     tools:context=".AdminActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Admin Page"
-        android:id="@+id/admin_text"
-        />
+        style="@style/viewParent.headerText"
+        android:text="hello admin"
+        android:id="@+id/admin_text"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_room"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/admin_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

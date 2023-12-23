@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#C2D3C4"
+
     >
 
     <LinearLayout
@@ -15,41 +15,20 @@
         android:paddingHorizontal="35dp"
         tools:context=".BerandaFragment">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp">
+        <TextView
+            style="@style/viewParent.headerText"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:text="reminder" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tanggal Hari ini"
-                android:textAlignment="center"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="$waktuInput"
-                android:textSize="16sp"
-                android:textAlignment="center"
-                android:id="@+id/text_tanggalHariIni"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1" />
-
-        </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
             android:outlineAmbientShadowColor="@color/black"
-            app:cardBackgroundColor="#526759">
+            app:cardBackgroundColor="#8F3749">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,17 +39,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sisa Kalori"
+                    android:text="-"
                     android:textAlignment="center"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:textColor="@color/hijauPastel2"
+                    android:id="@+id/txtSisaKalori"
+                    android:textColor="@color/white"
                     android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="email@gmail.com"
+                    android:text="Sisa Kalori"
                     android:textAlignment="center"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -81,34 +61,12 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp">
+            android:src="@drawable/course_design_whatisthisshit"
+            />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Latest Update"
-                android:textAlignment="center"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="16sp"
-                android:id="@+id/latest_update_makan"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:textAlignment="center" />
-
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

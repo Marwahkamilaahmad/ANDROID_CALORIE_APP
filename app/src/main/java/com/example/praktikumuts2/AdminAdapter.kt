@@ -1,6 +1,7 @@
 package com.example.praktikumuts2
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -40,20 +41,17 @@ class AdminAdapter(private val listItem : List<Menu>, private val onClickDelete:
                     val intent = Intent(binding.root.context, AdminEditActivity::class.java)
                         .apply {
                             putExtra("extraid", data.id)
-                            putExtra("extratanggal", data.date)
-                            putExtra("extradeskripsi", data.description)
-                            putExtra("extranominal", data.nominal)
-                            putExtra("extranama", data.nama)
-                            putExtra("extraalamat", data.alamat)
+                            putExtra("extratanggal", data.tanggal)
+                            putExtra("extrajumlahkalori", data.jumlah_kalori)
+                            putExtra("extranamamakanan", data.nama_makanan)
                         }
                     binding.root.context.startActivity(intent)
                 }
 
                 buttonDelete.setOnClickListener {
                     val posisi = listItem[position]
-                    deleteBudget(posisi)
+                    deleteMenu(posisi)
                 }
-                itemView.
 
             }
         }
@@ -72,6 +70,14 @@ class AdminAdapter(private val listItem : List<Menu>, private val onClickDelete:
 
     override fun getItemCount(): Int {
         return listItem.size
+    }
+
+    private fun deleteMenu(menu : Menu){
+        menuCollectionRef.document(menu.id).delete()
+            .addOnFailureListener{
+                Log.d("MainActivity", "Error deleting budget : ",
+                    it)
+            }
     }
 
 

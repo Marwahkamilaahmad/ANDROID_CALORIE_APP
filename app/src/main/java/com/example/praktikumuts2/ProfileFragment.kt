@@ -1,5 +1,6 @@
 package com.example.praktikumuts2
 
+import PrefManager
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
@@ -55,6 +56,7 @@ class ProfileFragment : Fragment() {
             buttonLogout.setOnClickListener {
                 val message : String = "are you sure want to logout ? ";
                 showCustomDialogBox(message)
+                PrefManager.getInstance(this@ProfileFragment.requireActivity()).clear()
             }
         }
         return view

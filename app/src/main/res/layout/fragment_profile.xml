@@ -7,9 +7,25 @@
     tools:context=".ProfileFragment"
     android:orientation="vertical"
     android:paddingHorizontal="35dp"
-    android:background="#C2D3C4"
-    android:paddingVertical="30dp">
+    android:background="#ffba60"
+    android:paddingVertical="15dp">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#BFFFFFFF"
+        android:outlineSpotShadowColor="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="30dp"
+        android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="match_parent"
@@ -19,9 +35,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="15dp"
+        app:cardCornerRadius="25dp"
         android:outlineAmbientShadowColor="@color/black"
-        app:cardBackgroundColor="#96AF99"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +49,7 @@
         android:layout_height="wrap_content"
         android:text="NAMA"
         android:id="@+id/text_nama"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -47,7 +62,7 @@
         android:textAlignment="center"
         android:id="@+id/text_email"
         android:textSize="18sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="5dp"
@@ -85,12 +100,18 @@
         android:textSize="18sp"
         />
 
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="logout"
         android:textColor="@color/black"
-        android:backgroundTint="@color/whiteu"
+        android:backgroundTint="@color/whiteBodyColor"
         android:id="@+id/buttonLogout"
         android:layout_marginTop="20dp"/>
 
